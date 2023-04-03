@@ -85,7 +85,8 @@ using namespace std;
 
 int main()
 {
-    int n,r,fatorialn = 1,fatorialr = 1, fatorialnr = 1;
+    int n,r;
+    float fatorialn = 1,fatorialr = 1, fatorialnr = 1;
     cin >> n >> r;
     for(int i = 1; i <= n;i++){
         fatorialn = fatorialn * i;
