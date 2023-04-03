@@ -79,7 +79,30 @@ int main()
     cout << "A probabilidade de sair o " << num << " è "<< (n1/n2)*100.0 << endl;
 
 
+#include <iostream>
 
+using namespace std;
+
+int main()
+{
+    int n,r,fatorialn = 1,fatorialr = 1, fatorialnr = 1;
+    cin >> n >> r;
+    for(int i = 1; i <= n;i++){
+        fatorialn = fatorialn * i;
+    }
+     for(int j = 1;j <= r;j++){
+        fatorialr = fatorialr * j;
+    }
+    for(int k = 1; k <= (n-r);k++){
+        fatorialnr = fatorialnr * k;
+    }
+    cout << fatorialn << "  " << fatorialr << "    " << fatorialnr << endl;
+
+    float combinacao = fatorialn/(fatorialr * fatorialnr);
+    cout << combinacao;
+
+    return 0;
+}
 
 
 
