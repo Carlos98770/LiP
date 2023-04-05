@@ -88,7 +88,8 @@ int main()
         cout << "Sabado";
         break;
         case 6:
-        cout << "Domingo";
+        cout << "Domingo";reak;
+    }
         break;
     }
 
@@ -205,7 +206,6 @@ int main()
     
     
     
-    
     #include <iostream>
 
 using namespace std;
@@ -214,8 +214,8 @@ int main()
 {
     int dia,mes,ano,j=0, m=0, diasmes = 1;
     cin >> dia >> mes >> ano;
-
-    for(int i = 1; i <= ano; i++){
+ // contagem dos anos bissextos;
+    for(int i = 1; i < ano; i++){
         int div1 = i%4;
         int div2 = i%100;
         int div3 = i%400;
@@ -228,26 +228,27 @@ int main()
     int div2 = ano%100;
     int div3 = ano%400;
 
-
+//ano bissexto
     if(div1== 0 && (div2 !=0 || div3==0)){
         if(mes >= 3 && mes < 5){
-            m = 59;
+            m = 60;
             diasmes = (mes-3)* 31 + m;
     }   else if(mes < 3){
             diasmes = (mes-1)*31;
     }   else if(mes >=5 && mes < 7){
-            m = 120;
+            m = 121;
             diasmes = ((mes-5)*31)+m;
     }   else if(mes >=7 && mes < 9){
-            m = 181;
+            m = 182;
             diasmes = ((mes-7)*31)+m;
     }   else if (mes >=9 && mes < 12){
-            m = 273;
+            m = 274;
             diasmes = ((mes-9)*31)+m;
     }   else{
-            m = 334;
+            m = 335;
             diasmes = ((mes-12)*31)+m;
     }
+      //ano nao bissexto
     }else{
         if(mes >= 3 && mes < 5){
             m = 59;
@@ -281,7 +282,7 @@ int main()
         cout << "Segunda-feira";
         break;
         case 1:
-        cout << "Terça-feira";
+        cout << "Terca-feira";
         break;
         case 2:
         cout << "Quarta-feira";
