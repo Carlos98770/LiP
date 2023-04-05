@@ -1,4 +1,100 @@
-#include <iostream>
+#include <iostream>#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int dia,mes,ano,j=0, m=0, diasmes = 1;
+    cin >> dia >> mes >> ano;
+
+    for(int i = 1; i <= ano; i++){
+        int div1 = i%4;
+        int div2 = i%100;
+        int div3 = i%400;
+        if(div1== 0 && (div2 !=0 || div3==0)){
+            j +=1;
+        }
+    }
+
+    int div1 = ano%4;
+    int div2 = ano%100;
+    int div3 = ano%400;
+
+
+    if(div1== 0 && (div2 !=0 || div3==0)){
+        if(mes >= 3 && mes < 5){
+            m = 59;
+            diasmes = (mes-3)* 31 + m;
+    }   else if(mes < 3){
+            diasmes = (mes-1)*31;
+    }   else if(mes >=5 && mes < 7){
+            m = 120;
+            diasmes = ((mes-5)*31)+m;
+    }   else if(mes >=7 && mes < 9){
+            m = 181;
+            diasmes = ((mes-7)*31)+m;
+    }   else if (mes >=9 && mes < 12){
+            m = 273;
+            diasmes = ((mes-9)*31)+m;
+    }   else{
+            m = 334;
+            diasmes = ((mes-12)*31)+m;
+    }
+    }else{
+        if(mes >= 3 && mes < 5){
+            m = 59;
+            diasmes = ((mes-3)*31)+m;
+
+    }   else if(mes < 3){
+            diasmes = (mes-1)*31;
+
+    }   else if(mes >=5 && mes < 7){
+            m = 120;
+            diasmes = ((mes-5)*31)+m;
+
+    }   else if(mes >=7 && mes < 9){
+            m = 181;
+            diasmes = ((mes-7)*31)+m;
+
+    }   else if (mes >=9 && mes < 12){
+            m = 273;
+            diasmes = ((mes-9)*31)+m;
+
+    }   else{
+            m = 334;
+            diasmes = ((mes-12)*31)+m;
+    }
+
+    }
+    int total = dia + diasmes + (ano-1) + (j-1);
+
+    switch(total%7){
+        case 0:
+        cout << "Segunda-feira";
+        break;
+        case 1:
+        cout << "Terça-feira";
+        break;
+        case 2:
+        cout << "Quarta-feira";
+        break;
+        case 3:
+        cout << "Quinta-feira";
+        break;
+        case 4:
+        cout << "Sexta-feira";
+        break;
+        case 5:
+        cout << "Sabado";
+        break;
+        case 6:
+        cout << "Domingo";
+        break;
+    }
+
+
+    return 0;
+}
 #include <iomanip>
 
 
@@ -104,6 +200,143 @@ int main()
 
     return 0;
 }
+    
+    
+    
+    
+    
+    
+    #include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int dia,mes,ano,j=0, m=0, diasmes = 1;
+    cin >> dia >> mes >> ano;
+
+    for(int i = 1; i <= ano; i++){
+        int div1 = i%4;
+        int div2 = i%100;
+        int div3 = i%400;
+        if(div1== 0 && (div2 !=0 || div3==0)){
+            j +=1;
+        }
+    }
+
+    int div1 = ano%4;
+    int div2 = ano%100;
+    int div3 = ano%400;
+
+
+    if(div1== 0 && (div2 !=0 || div3==0)){
+        if(mes >= 3 && mes < 5){
+            m = 59;
+            diasmes = (mes-3)* 31 + m;
+    }   else if(mes < 3){
+            diasmes = (mes-1)*31;
+    }   else if(mes >=5 && mes < 7){
+            m = 120;
+            diasmes = ((mes-5)*31)+m;
+    }   else if(mes >=7 && mes < 9){
+            m = 181;
+            diasmes = ((mes-7)*31)+m;
+    }   else if (mes >=9 && mes < 12){
+            m = 273;
+            diasmes = ((mes-9)*31)+m;
+    }   else{
+            m = 334;
+            diasmes = ((mes-12)*31)+m;
+    }
+    }else{
+        if(mes >= 3 && mes < 5){
+            m = 59;
+            diasmes = ((mes-3)*31)+m;
+
+    }   else if(mes < 3){
+            diasmes = (mes-1)*31;
+
+    }   else if(mes >=5 && mes < 7){
+            m = 120;
+            diasmes = ((mes-5)*31)+m;
+
+    }   else if(mes >=7 && mes < 9){
+            m = 181;
+            diasmes = ((mes-7)*31)+m;
+
+    }   else if (mes >=9 && mes < 12){
+            m = 273;
+            diasmes = ((mes-9)*31)+m;
+
+    }   else{
+            m = 334;
+            diasmes = ((mes-12)*31)+m;
+    }
+
+    }
+    int total = dia + diasmes + (ano-1) + (j-1);
+
+    switch(total%7){
+        case 0:
+        cout << "Segunda-feira";
+        break;
+        case 1:
+        cout << "Terça-feira";
+        break;
+        case 2:
+        cout << "Quarta-feira";
+        break;
+        case 3:
+        cout << "Quinta-feira";
+        break;
+        case 4:
+        cout << "Sexta-feira";
+        break;
+        case 5:
+        cout << "Sabado";
+        break;
+        case 6:
+        cout << "Domingo";
+        break;
+    }
+
+
+    return 0;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 
