@@ -315,7 +315,55 @@ int main()
     
     
     
-    
+   #include <iostream>
+#iclude
+using namespace std;
+
+int main()
+{
+    int numero,div = 0,cont = 0;
+    int div2 = 0, resto = 0, numero_inverso = 0;
+    cin >> numero;
+    int x = numero;
+    do{
+        div = numero/10;
+        numero = div;
+        cont +=1;
+    }while(div >= 1);
+
+    for(int i = cont; i > 0 ; i--){
+        cout << x << " o numero x"<< endl;
+        resto = x%10;
+        div2 = x/10;
+        x = div2;
+        cout << numero_inverso << " o numero inverso"<< endl;
+        numero_inverso = i * 10;
+
+        cout << i << " o i"<< endl;
+        cout << resto << " o resto"<< endl;
+        cout << div2 << " o div2"<< endl;
+        cout << numero_inverso << " o numero inverso"<< endl;
+    }
+
+
+
+
+
+
+
+    /*
+    int numero,div = 0,div2 = 0;
+    cin >> numero;
+    do{
+        div = numero/10;
+        div2 = numero%10;
+        numero = div;
+        cout << div2;
+    }while(div >= 1);
+*/
+    return 0;
+}
+ 
     
     
     
