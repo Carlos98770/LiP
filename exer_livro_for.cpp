@@ -360,9 +360,27 @@ int main()
         numero = div;
         cout << div2;
     }while(div >= 1);
+
+    carlos eduardo
+    carlos
+    carlos eduardo
+    carlos
+    carlos eduardo
+    carlos
+    vcarlos eduardo
+    carlos
+    carlos eduardo
+    carlos
+    carlos eduardo
+    carlos
+    v
+    carlos eduardo
+    carlos
+    carlos eduardo
+    carlos
 */
-    return 0;
-}
+
+    
  
     
     
