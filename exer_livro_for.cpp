@@ -381,6 +381,46 @@ int main()
 */
 
     
+    
+    questao 03// lista matrizes
+    #include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int l,c;
+    cin >> l >> c;
+    int ponto;
+    int l_p,c_p;
+    int A[l][c];
+    for(int i = 0; i < l; i++)
+        for(int j = 0; j < c; j++)
+            cin >> A[i][j];
+
+    for(int i = 0; i < l; i++){
+        int aux = A[i][0];
+        int aux2;
+        for(int j = 1; j < c; j++){
+            if( aux > A[i][j]);{
+                aux = A[i][j];
+                aux2 = j;
+                }
+        }
+        for(int w = 0; w < c; w++ )
+            if( aux > A[w][aux2] ){
+                ponto = aux;
+                l_p = w;
+                c_p = i;
+                }
+
+    }
+    cout << ponto << endl;
+    cout << l_p << endl;
+    cout << c_p;
+    return 0;
+}
+    
  
     
     
