@@ -425,6 +425,47 @@ int main()
     
     
     
+  MULTIPLICAÇÃO DE MATRIZES PYTHON
+    
+M = []
+M2 = []
+identidade = []
+mult = []
+
+for i in range(2):
+    colun = []
+    for j in range(2):
+        colun.append(int(input('valor: ')))
+    M.append(colun)
+
+for i in range(2):
+    colun = []
+    for j in range(2):
+        if i==j:
+            colun.append(1)
+        else:
+            colun.append(0)
+    identidade.append(colun) 
+    
+
+for i in range(2):
+    colun = []
+    for j in range(2):
+        colun.append(int(input('valor: ')))
+    M2.append(colun)
+    
+for i in range(2):
+    colun = []
+    for j in range(2):
+        colun.append(0)
+    mult.append(colun)
+
+for i in range(2):
+    for j in range(2):
+        for k in range(2):
+            mult[i][j] += M[i][k] * M2[k][j]
+    
+print(mult)
     
     
     
