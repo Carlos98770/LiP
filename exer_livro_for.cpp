@@ -464,7 +464,27 @@ print(mult)
     
     
     
+#Tentativa para fazer progama que escalone a matriz pelo metodo de gauss-jordan
+
+
+matriz = []
+n_sistema = int(input('Digite quantos sistemas serão introduzidos: '))
+for i in range(n_sistema):
+    vetores = []
+    tamanho = int(input('tamanho do vetor: '))
+    for vetor in range(tamanho):
+        elemento = int(input('Elemento do vetor : '))
+        vetores.append(elemento)
+    matriz.append(vetores)
     
+for i in range(len(matriz)):
+    aux = matriz[i][i]
+    for j in range(len(vetores)):
+        matriz[i][j] = matriz[i][j]/aux
+        
+        
+print(matriz)
+
     
     
     
