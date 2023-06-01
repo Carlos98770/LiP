@@ -426,40 +426,47 @@ int main()
     
     
   MULTIPLICAÇÃO DE MATRIZES PYTHON
-    
-M = []
-M2 = []
-identidade = []
-mult = []
-#Inserir elementos a matruz M
-for i in range(2):
-    colun = []
-    for j in range(2):
-        colun.append(int(input('valor: ')))
-    M.append(colun)
+      
+def lerMatriz():
+    linhas = int(input('numero de linhas'))
+    colunas = int(input('numero de colunas'))
+    matriz = []
+    for i in range(linhas):
+        linha = []
+        for j in range(colunas):
+            linha.append(int(input()))
+        matriz.append(linha)
+    return matriz
+        
+def criarMatriz(linhas , colunas, valor):
+    matriz = []
+    for i in range(linhas):
+        linha = []
+        for j in range(colunas):
+            linha.append(valor)
+        matriz.append(linha)       
+    return matriz
 
-#Inserindo elementos a matriz M2
-for i in range(2):
-    colun = []
-    for j in range(2):
-        colun.append(int(input('valor: ')))
-    M2.append(colun)
+                  
+def imprimirMatriz(M):
+    for i in range(len(M)):
+        for j in range(len(M[0])):
+            print(M[i][j], end=" ")
+        print()
 
+def multiplicarMatriz(M1 , M2):
+    matrizResultante = []
+    for i in range(len(M1)):
+        linha = []
+        for j in range(len(M2[0])):
+            elemento = 0
+            for k in range(len(M1[0])):
+                elemento += M1[i][k] * M2[k][j]
+            linha.append(elemento)
+        matrizResultante.append(linha)
     
-for i in range(2):
-    colun = []
-    for j in range(2):
-        colun.append(0)
-    mult.append(colun)
-    
-#Operação da multiplicação entre as matrizes inseridas
-for i in range(2):
-    for j in range(2):
-        for k in range(2):
-            mult[i][j] += M[i][k] * M2[k][j]
-    
-print(mult)
-    
+    return matrizResultante
+
     
     
     
