@@ -560,6 +560,52 @@ int main()
     
     
     
+    QUADRADO MAGICO
+     #include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n;
+    cin >> n;
+    int M[n][n];
+    bool flag =  false;
+    for(int i = 0; i < n; i++)
+        for(int j = 0; j < n; j++)
+            cin >> M[i][j];
+    for(int i = 0; i < n; i++)
+    {   int somal = 0,somac = 0,somadp= 0,somads = 0;
+        int aux = 0;
+        int aux2 = (n-1);
+        for(int j = 0; j < n; j++)
+        {
+         somal += M[i][j];
+         somac += M[j][i];
+         somadp += M[j][j];
+         somads = somads + M[aux2][aux];
+         aux2--;
+         aux++;
+
+        }
+    if( somal == somac && somac == somadp && somadp == somads )
+        flag = true;
+    else
+    {
+        flag = false;
+        break;
+    }
+
+    }
+
+    if(flag)
+        cout << " Quadrado mágico";
+    else
+        cout << "nop";
+
+    return 0;
+}
+    
     
     
     
