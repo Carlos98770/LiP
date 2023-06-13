@@ -496,6 +496,65 @@ print(matriz)
     
     
     
+            
+            
+            
+   VETOR INTERSESÇAO C++
+   #include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int m,n;
+    cin >> m >> n;
+    int V1[m];
+    int V2[n];
+    int w;
+    if( m > n)
+        w = n;
+    else
+        w = m;
+    int V3[w];
+    int cont = 0;
+    for(int i = 0; i < m; i++)
+        cin >> V1[i];
+    for(int i = 0; i < n; i++)
+        cin >> V2[i];
+
+    for(int i = 0; i < w; i++)
+        for(int j = 0; j < w; j++)
+            if( V1[i] == V2[j])
+            {
+             V3[cont] = V1[i];
+             cont++;
+            }
+
+
+
+    for(int i = 0; i < cont; i++)
+        for(int j = i + 1; j < cont; j++)
+            if( V3[i] == V3[j])
+            {
+             int aux = V3[cont-1];
+             V3[cont-1] = V3[i];
+             V3[i] = aux;
+             cont--;
+            }
+
+    for(int i = 0; i < cont-1; i++)
+        for(int j = i+1; j < cont; j++)
+            if( V3[i] > V3[j])
+            {
+                int aux = V3[j];
+                V3[j] = V3[i];
+                V3[i] = aux;
+            }
+
+    for(int i = 0; i < cont; i++)
+        cout << V3[i] << " ";
+    return 0;
+}
     
     
     
