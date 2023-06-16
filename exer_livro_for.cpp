@@ -605,7 +605,66 @@ int main()
 
     return 0;
 }
-    
+
+    #include <iostream>
+#include <cstring>
+using namespace std;
+void lerString( char str[], int tamMaximo)
+{
+    if(cin.peek() == '\n')
+        cin.ignore();
+    cin.getline(str, tamMaximo);
+}
+void strmaius ( char str [])
+{
+    for(int i = 0; i < strlen(str) ; i++)
+        str[i] = toupper(str[i]);
+}
+int main()
+{
+    char str[200];
+    lerString(str,200);
+
+    strmaius(str);
+
+    cout << str;
+
+    return 0;
+}
+    Questão 29
+#include <iostream>
+#include <cstring>
+using namespace std;
+void lerString( char str[], int tamMaximo)
+{
+    if(cin.peek() == '\n')
+        cin.ignore();
+    cin.getline(str, tamMaximo);
+}
+int strchr ( char str[], char crct)
+{
+    for(int i =0; i < strlen(str); i++)
+        if( str[i] == 's')
+            return i;
+
+    return -1;
+
+}
+    Questão 31
+int main()
+{
+    char str[200];
+    lerString(str,200);
+    char letra;
+    cin >> letra;
+
+    cout <<  strchr(str, letra);
+
+    return 0;
+}
+
+
+
     
     
     
