@@ -663,6 +663,33 @@ int main()
     return 0;
 }
 
+    QUESTÃO 34
+    #include <iostream>
+#include <cstring>
+using namespace std;
+void lerString( char str[], int tamMaximo)
+{
+    if(cin.peek() == '\n')
+        cin.ignore();
+    cin.getline(str, tamMaximo);
+}
+void strinv(char str [])
+{
+    for(int i = 0, j = (strlen(str)-1); i < (strlen(str)/2); i++, j--)
+    {
+        int aux = str[j];
+        str[j] = str [i];
+        str[i] = aux;
+    }
+}
+int main()
+{
+    char str[200];
+    lerString(str,200);
+    strinv(str);
+    cout << str;
+    return 0;
+}
 
 
     
