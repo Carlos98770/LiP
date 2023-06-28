@@ -77,7 +77,12 @@ int main()
         break;
         case 2:
         cout << "Quarta-feira";
-        break;
+        break;void imprimir(VETOR v){
+    for(int i = 0; i < n; i++)
+    {
+        cout << V[i].placa << endl;
+
+    }
         case 3:
         cout << "Quinta-feira";
         break;
@@ -698,6 +703,56 @@ int main()
 
 
 
+
+
+    return 0;
+}
+
+
+
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+struct HORARIO{
+    int hora;
+    int minuto;
+    int segundo;
+};
+struct CARRO{
+    char placa[200];
+    HORARIO entrada;
+    HORARIO saida;
+};
+void lerString(char str[], int n)
+{
+    while(cin.peek()=='\n')
+        cin.ignore();
+    cin.getline(str,n);
+}
+void ler( CARRO V[], int n){
+    for(int i = 0; i < n; i++)
+    {
+        lerString(V[i].placa, 200);
+        cin >> V[i].entrada.hora;
+        cin >> V[i].entrada.minuto;
+        cin >> V[i].entrada.segundo;
+        cin >> V[i].saida.hora;
+        cin >> V[i].saida.minuto;
+        cin >> V[i].saida.segundo;
+    }
+}
+
+
+
+
+
+int main()
+{
+    int n;
+    cin >> n;
+    CARRO BancoDeDados[n];
+    ler(BancoDeDados,n);
 
 
     return 0;
